@@ -1,13 +1,30 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import { deletePost, /*likePost*/ } from '../../../../actions/posts'
+import { deletePost, likePost } from '../../../../actions/posts'
 
 import moment from 'moment'
 
 function Post({ post }) {
     const user = JSON.parse(localStorage.getItem('profile'))
     const dispatch = useDispatch()
+
+    function likesCount() {
+
+        switch (post.likes.length) {
+            case 0:
+                return
+
+            case 1:
+                return post.likes[0].UserName
+
+            case 2:
+                return post.likes[0].UserName + ' and ' + post.likes[1].UserName
+
+            default:
+                return post.likes[0].UserName + ', ' + post.likes[1].UserName + ' and ' + (post.likes.length - 2) + ' others'
+        }
+    }
 
     return (
         <div className="bg-white p-4 rounded shadow mt-3">
@@ -60,12 +77,12 @@ function Post({ post }) {
                     {/* Likes */}
                     <div className="align-items-center d-flex position-absolute start-0 top-0" style={{ height: '50px', zIndex: 2 }}>
                         <div className="me-2">
-                            <i className="text-primary fas fa-thumbs-up" />
-                            <i className="text-danger fab fa-gratipay" />
-                            <i className="text-warning fas fa-grin-squint" />
+                            <i className="mr text-primary fas fa-thumbs-up" />
+                            <i className="mr text-danger fab fa-gratipay" />
+                            <i className="mr text-warning fas fa-grin-squint" />
                         </div>
 
-                        <p className="m-0 text-muted fs-7">{post.likes} likes</p>
+                        <p className="m-0 text-muted fs-7">{likesCount()}</p>
                     </div>
 
                     {/* Comments start*/}
@@ -89,7 +106,7 @@ function Post({ post }) {
                             {/* Comment & like bar */}
                             <div className="d-flex justify-content-around">
                                 <div className="align-items-center d-flex dropdown-item justify-content-center p-1 pointer rounded text-muted"
-                                    /*onClick={() => dispatch(likePost(post._id))}*/>
+                                    onClick={() => dispatch(likePost(post._id, { 'UserName': user.result.name }))}>
 
                                     <i className="fas fa-thumbs-up me-3" />
                                     <p className="m-0">Like</p>

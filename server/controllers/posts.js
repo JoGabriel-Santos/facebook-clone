@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { request } from 'express'
 
 import PostMessage from '../models/posts.js'
 
@@ -50,6 +50,35 @@ export const deletePost = async (require, response) => {
 
         response.status(401).json({ message: "Unauthorized user." })
     }
+}
+
+export const likePost = async (require, response) => {
+    const { id } = require.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id))
+        return response.status(404).send(`No post with id: ${id}`)
+
+    const likesPost = await PostMessage.findById(id)
+
+    let isUserAlreadyLiked = false
+
+    likesPost.likes.map((userId) => {
+        if (userId.UserToken === require.userId) {
+            isUserAlreadyLiked = true
+            return
+        }
+    })
+
+    if (!isUserAlreadyLiked) {
+        likesPost.likes.push({ UserName: require.body.UserName, UserToken: require.userId })
+
+    } else {
+        likesPost.likes = likesPost.likes.filter((user) => require.userId !== user.UserToken)
+    }
+
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, likesPost, { new: true })
+
+    response.status(200).json(updatedPost)
 }
 
 export default router

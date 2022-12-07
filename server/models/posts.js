@@ -11,7 +11,7 @@ const postSchema = mongoose.Schema({
         default: []
     },
     likes: {
-        type: [String],
+        type: [Object],
         default: [],
     },
     createdAt: {

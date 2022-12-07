@@ -38,6 +38,10 @@ body::-webkit-scrollbar-thumb {
 	height: 100vh;
 }
 
+.mr {
+	margin-right: 0.1rem;
+}
+
 /* nav button */
 .nav__btn button:hover {
 	background: #f0f2f5 !important;
