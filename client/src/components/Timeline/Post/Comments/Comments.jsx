@@ -16,8 +16,7 @@ function Comments({ post }) {
 
                         <div key={comment.idComment} className="align-items-center border d-flex my-1 px-3 shadow">
 
-                            <img className="rounded-circle me-2 photo"
-                                src={comment.userPhoto} alt="avatar" />
+                            <img className="rounded-circle me-2 photo" src={comment.userPhoto} alt="" />
 
                             <div className="comment__input p-3 rounded w-100">
                                 <div className="d-flex justify-content-end">
