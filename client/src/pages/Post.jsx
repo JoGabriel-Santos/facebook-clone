@@ -125,7 +125,7 @@ function Post({ post }) {
                                 </div>
                             </div>
 
-                            <Comments />
+                            <Comments post={post}/>
                         </div>
                     </div>
                 </div>

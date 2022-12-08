@@ -7,7 +7,7 @@ const postSchema = mongoose.Schema({
     message: String,
     image: String,
     comments: {
-        type: [String],
+        type: [Object],
         default: []
     },
     likes: {

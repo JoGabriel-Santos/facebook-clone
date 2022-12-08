@@ -1,4 +1,4 @@
-import express, { request } from 'express'
+import express from 'express'
 
 import PostMessage from '../models/posts.js'
 
@@ -34,7 +34,7 @@ export const createPost = async (require, response) => {
 }
 
 export const deletePost = async (require, response) => {
-    const { id } = require.params;
+    const { id } = require.params
 
     if (!mongoose.Types.ObjectId.isValid(id))
         return response.status(404).send(`No post with id: ${id}`)
@@ -52,8 +52,25 @@ export const deletePost = async (require, response) => {
     }
 }
 
+export const commentPost = async (require, response) => {
+    const { id } = require.params
+    const { userName, userPhoto, userComment } = require.body
+
+    const idComment = Math.floor(Math.random() * 100).toString()
+
+    console.log(idComment)
+
+    const commentPost = await PostMessage.findById(id)
+
+    commentPost.comments.push({ idComment, userName, userPhoto, userComment })
+
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, commentPost, { new: true });
+
+    response.json(updatedPost)
+}
+
 export const likePost = async (require, response) => {
-    const { id } = require.params;
+    const { id } = require.params
 
     if (!mongoose.Types.ObjectId.isValid(id))
         return response.status(404).send(`No post with id: ${id}`)
