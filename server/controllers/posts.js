@@ -58,8 +58,6 @@ export const commentPost = async (require, response) => {
 
     const idComment = Math.floor(Math.random() * 100).toString()
 
-    console.log(idComment)
-
     const commentPost = await PostMessage.findById(id)
 
     commentPost.comments.push({ idComment, userName, userPhoto, userComment })
