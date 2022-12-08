@@ -1,4 +1,4 @@
-import { FETCH_ALL, CREATE, DELETE, LIKE } from '../constants/actionTypes'
+import { FETCH_ALL, CREATE, DELETE, COMMENT, LIKE } from '../constants/actionTypes'
 
 const reducer = (posts = [], action) => {
     switch (action.type) {
@@ -11,6 +11,7 @@ const reducer = (posts = [], action) => {
         case DELETE:
             return posts.filter((post) => post._id !== action.payload)
 
+        case COMMENT:
         case LIKE:
             return posts.map((post) => (post._id) === action.payload._id ? action.payload : post)
 
