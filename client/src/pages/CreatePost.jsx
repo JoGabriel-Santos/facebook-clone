@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import { createPost } from '../../../actions/posts'
+import { createPost } from '../actions/posts'
 
-import CreateActions from './CreateActions'
-import CreateRoom from './CreateRoom'
-import UploadImage from './UploadImage'
+import CreateActions from '../components/Timeline/Create/CreateActions'
+import CreateRoom from '../components/Timeline/Create/CreateRoom'
+import UploadImage from '../components/Timeline/Create/UploadImage'
 
 function Create({ currentId, setCurrentId }) {
     const user = JSON.parse(localStorage.getItem('profile'))

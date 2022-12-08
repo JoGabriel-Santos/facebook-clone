@@ -12,7 +12,7 @@ function Timeline() {
 
                 {/* S 1 */}
                 <div className="bg-white mx-1 rounded story" type="button" style={{ width: '6em', height: '190px' }}>
-                    <img className="card-img-top" src="https://source.unsplash.com/collection/happy-people" alt="story posts"
+                    <img className="card-img-top" src={"https://source.unsplash.com/collection/happy-people"} alt="story posts"
                         style={{ minHeight: '125px', objectFit: 'cover' }}
                     />
 

@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux'
 
 import { getPosts } from '../../actions/posts'
 
+import CreatePost from '../CreatePost'
 import Stories from '../../components/Timeline/Stories'
-import Create from '../../components/Timeline/Create/Create'
-import Posts from '../../components/Timeline/Posts/Posts'
+import Posts from '../../components/Timeline/Post/Posts'
 
 function Timeline() {
     const [currentId, setCurrentId] = useState(0)
@@ -22,7 +22,7 @@ function Timeline() {
             <div className="d-flex flex-column justify-content-center mx-auto w-100" style={{ paddingTop: '56px', maxWidth: '680px' }}>
 
                 <Stories />
-                <Create currentId={currentId} setCurrentId={setCurrentId} />
+                <CreatePost currentId={currentId} setCurrentId={setCurrentId} />
                 <Posts />
             </div>
         </div>

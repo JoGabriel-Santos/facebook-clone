@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-import Navbar from '../components/Navbar'
+import Navbar from './Navbar'
 import Sidebar from './Feed/Sidebar'
 import Timeline from './Feed/Timeline'
 import Chatbar from './Feed/Chatbar'
