@@ -7,6 +7,8 @@ export const DELETE = 'DELETE'
 export const COMMENT = 'COMMENT'
 export const LIKE = 'LIKE'
 
+export const DELETE_COMMENT = 'DELETE_COMMENT'
+
 export const FETCH_BY_CREATOR = 'FETCH_BY_CREATOR'
 export const FETCH_BY_SEARCH = 'FETCH_BY_SEARCH'
 export const FETCH_POST = 'FETCH_POST'

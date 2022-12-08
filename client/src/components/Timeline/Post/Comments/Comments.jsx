@@ -1,8 +1,18 @@
 import React from 'react'
 
+import { useDispatch } from 'react-redux'
+
+import { deleteComment } from '../../../../actions/posts'
+
 import CreateComment from './CreateComment'
 
 function Comments({ post }) {
+    const dispatch = useDispatch()
+
+    function deleteCommentHandler(id) {
+
+        dispatch(deleteComment(post._id, { idComment: id }))
+    }
 
     return (
         <div className="accordion-collapse collapse" id={`id${post._id}`}>
@@ -15,6 +25,7 @@ function Comments({ post }) {
                     post.comments.map((comment) => (
 
                         <div key={comment.idComment} className="align-items-center border d-flex my-1 px-3 shadow">
+                            {console.log(comment)}
 
                             <img className="rounded-circle me-2 photo" src={comment.userPhoto} alt="" />
 
@@ -29,7 +40,12 @@ function Comments({ post }) {
                                     <ul className="dropdown-menu border-0 shadow" aria-labelledby={`id${comment.idComment}`}>
 
                                         <li className="align-items-center d-flex">
-                                            <button className="dropdown-item d-flex justify-content-around align-items-center fs-7"> Delete comment </button>
+
+                                            <button
+                                                onClick={() => deleteCommentHandler(comment.idComment)}
+                                                className="dropdown-item d-flex justify-content-around align-items-center fs-7">
+                                                Delete comment
+                                            </button>
                                         </li>
                                     </ul>
                                 </div>
