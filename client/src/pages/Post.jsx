@@ -31,10 +31,8 @@ function Post({ post }) {
     return (
         <div className="bg-white p-4 rounded shadow mt-3">
 
-            {/* Author */}
             <div className="d-flex justify-content-between">
 
-                {/* Avatar */}
                 <div className="d-flex">
                     <img className="rounded-circle me-2" src={post.creatorPhoto} alt=""
                         style={{ width: '38px', height: '38px', objectFit: 'cover' }}
@@ -46,14 +44,12 @@ function Post({ post }) {
                     </div>
                 </div>
 
-                {/* Delete */}
                 <i className="fas fa-ellipsis-h" id="postMenu"
                     type="button"
                     aria-expanded="false"
                     data-bs-toggle="dropdown"
                 />
 
-                {/* Delete menu */}
                 <ul className="border-0 dropdown-menu shadow" aria-labelledby="postMenu">
                     <li className="align-items-center d-flex">
                         <button className="align-items-center d-flex dropdown-item fs-7 justify-content-around"
@@ -64,19 +60,15 @@ function Post({ post }) {
                 </ul>
             </div>
 
-            {/* Post content */}
             <div className="mt-3">
 
-                {/* Content */}
                 <div>
                     <p>{post.message}</p>
                     <img className="img-fluid rounded" src={post.image} alt="" />
                 </div>
 
-                {/* Likes & comments */}
                 <div className="mt-3 post__comment position-relative">
 
-                    {/* Likes */}
                     <div className="align-items-center d-flex position-absolute start-0 top-0" style={{ height: '50px', zIndex: 2 }}>
                         <div className="me-2">
                             <i className="mr text-primary fas fa-thumbs-up" />
@@ -87,16 +79,15 @@ function Post({ post }) {
                         <p className="m-0 text-muted fs-7">{likesCount()}</p>
                     </div>
 
-                    {/* Comments start*/}
                     <div className="accordion" id="accordion">
                         <div className="accordion-item border-0">
 
                             {/* Comment collapse */}
                             <h2 className="accordion-header" id="heading">
-                                <div className="accordion-button collapsed pointer d-flex justify-content-end"
-                                    aria-controls="collapsePost"
+                                <div className="accordion-styles accordion-button collapsed pointer d-flex justify-content-end"
+                                    aria-controls={`id${post._id}`}
                                     aria-expanded="false"
-                                    data-bs-target="#collapsePost"
+                                    data-bs-target={`#id${post._id}`}
                                     data-bs-toggle="collapse">
 
                                     <p className="m-0">Comments</p>
@@ -105,7 +96,6 @@ function Post({ post }) {
 
                             <hr />
 
-                            {/* Comment & like bar */}
                             <div className="d-flex justify-content-around">
                                 <div className="align-items-center d-flex dropdown-item justify-content-center p-1 pointer rounded text-muted"
                                     onClick={() => dispatch(likePost(post._id, { 'UserName': user.result.name }))}>
@@ -115,9 +105,9 @@ function Post({ post }) {
                                 </div>
 
                                 <div className="align-items-center d-flex dropdown-item justify-content-center p-1 pointer rounded text-muted"
-                                    aria-controls="collapsePost"
+                                    aria-controls={`id${post._id}`}
                                     aria-expanded="false"
-                                    data-bs-target="#collapsePost"
+                                    data-bs-target={`#id${post._id}`}
                                     data-bs-toggle="collapse">
 
                                     <i className="fas fa-comment-alt me-3" />
@@ -125,7 +115,7 @@ function Post({ post }) {
                                 </div>
                             </div>
 
-                            <Comments post={post}/>
+                            <Comments post={post} />
                         </div>
                     </div>
                 </div>

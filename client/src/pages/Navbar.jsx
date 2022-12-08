@@ -26,16 +26,12 @@ function Appbar() {
             <div className="container-fluid">
                 <div className="align-items-center row">
 
-                    {/* search */}
                     <div className="align-items-center col d-flex">
 
-                        {/* logo */}
                         <i className="fab fa-facebook text-primary" style={{ fontSize: '3rem' }} />
 
-                        {/* search bar */}
                         <div className="input-group ms-2" type="button">
 
-                            {/* mobile */}
                             <div className="d-lg-none input-group-prepend" id="searchMenuMobile">
 
                                 <div className="bg-gray border-0 input-group-text rounded-circle" style={{ minHeight: '40px' }}>
@@ -43,7 +39,6 @@ function Appbar() {
                                 </div>
                             </div>
 
-                            {/* desktop */}
                             <div className="d-lg-block d-none input-group-prepend" id="searchMenu">
 
                                 <div className="bg-gray border-0 input-group-text rounded-pill" style={{ minHeight: '40px', minWidth: '230px' }}>
@@ -54,31 +49,26 @@ function Appbar() {
                         </div>
                     </div>
 
-                    {/* nav */}
                     <div className="col d-none d-xl-flex justify-content-center">
 
-                        {/* home */}
                         <div className="mx-4 nav__btn nav__btn-active">
                             <button className="btn px-4" type="button">
                                 <i className="fas fa-home fs-4 text-muted" />
                             </button>
                         </div>
 
-                        {/* market */}
                         <div className="mx-4 nav__btn">
                             <button className="btn px-4" type="button">
                                 <i className="fas fa-store fs-4 text-muted" />
                             </button>
                         </div>
 
-                        {/* group */}
                         <div className="mx-4 nav__btn">
                             <button className="btn px-4" type="button">
                                 <i className="fa-users fas fs-4 text-muted" />
                             </button>
                         </div>
 
-                        {/* gaming */}
                         <div className="mx-4 nav__btn">
                             <button className="btn px-4" type="button">
                                 <i className="fas fa-gamepad fs-4 text-muted" />
@@ -86,10 +76,8 @@ function Appbar() {
                         </div>
                     </div>
 
-                    {/* menus */}
                     <div className="col d-flex align-items-center justify-content-end">
 
-                        {/* avatar */}
                         <div className="align-items-center d-none d-xl-flex justify-content-center">
                             <img className="rounded-circle me-2" src={user.result.picture} alt=""
                                 style={{ width: '38px', height: '38px', objectFit: 'cover' }}
@@ -98,7 +86,6 @@ function Appbar() {
                             <p className="m-0">{user.result.name}</p>
                         </div>
 
-                        {/* main menu */}
                         <div className="align-items-center bg-gray d-flex justify-content-center mx-2 p-1 rounded-circle"
                             type="button" id="mainMenu"
                             style={{ width: '38px', height: '38px' }}>
@@ -106,7 +93,6 @@ function Appbar() {
                             <i className="fas fa-ellipsis-h" />
                         </div>
 
-                        {/* chat */}
                         <div className="align-items-center bg-gray d-flex justify-content-center mx-2 p-1 rounded-circle"
                             type="button" id="chatMenu"
                             style={{ width: '38px', height: '38px' }}>
@@ -114,7 +100,6 @@ function Appbar() {
                             <i className="fas fa-comment" />
                         </div>
 
-                        {/* notifications */}
                         <div className="align-items-center bg-gray d-flex justify-content-center mx-2 p-1 rounded-circle"
                             type="button" id="notMenu"
                             style={{ width: '38px', height: '38px' }}>
@@ -122,7 +107,6 @@ function Appbar() {
                             <i className="fas fa-bell" />
                         </div>
 
-                        {/* secondary menu */}
                         <div className="rounded-circle p-1 bg-gray d-flex align-items-center justify-content-center mx-2"
                             type="button" id="secondMenu"
                             aria-expanded="false"
@@ -133,12 +117,10 @@ function Appbar() {
                             <i className="fas fa-caret-down" />
                         </div>
 
-                        {/* secondary menu dd */}
                         <ul className="border-0 dropdown-menu p-3 shadow"
                             aria-labelledby="secondMenu"
                             style={{ width: '23em' }}>
 
-                            {/* avatar */}
                             <li className="dropdown-item p-1 rounded d-flex" type="button">
                                 <img src={user.result.picture} className="rounded-circle me-2" alt=""
                                     style={{ width: '38px', height: '38px', objectFit: 'cover' }} />
@@ -151,7 +133,6 @@ function Appbar() {
 
                             <hr />
 
-                            {/* feedback */}
                             <li className="dropdown-item p-1 rounded d-flex align-items-center" type="button">
                                 <i className="fas fa-exclamation-circle bg-gray p-2 rounded-circle" />
 
@@ -165,7 +146,6 @@ function Appbar() {
 
                             <hr />
 
-                            {/* options */}
                             <li className="dropdown-item my-3 p-1 rounded" type="button">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">

@@ -26,9 +26,9 @@ function CreateComment({ post }) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="d-flex my-1">
+        <form onSubmit={handleSubmit} className="d-flex my-1 pt-5">
             <div>
-                <img className="rounded-circle me-2" src={user.result.picture} style={{ width: '38px', height: '38px', objectFit: 'cover' }} alt="" />
+                <img className="photo rounded-circle me-2" src={user.result.picture} alt="" />
             </div>
 
             <input className="bg-gray border-0 form-control rounded-pill"
@@ -39,7 +39,7 @@ function CreateComment({ post }) {
                 type="text"
             />
 
-            <button className="bg-gray border-0 form-control rounded-pill" style={{ fontSize: '20px', marginLeft: '5px', maxWidth: '100px' }} >
+            <button className="bg-gray border-0 form-control rounded-pill send-comment" >
                 <i className="bi bi-send"></i>
             </button>
         </form>

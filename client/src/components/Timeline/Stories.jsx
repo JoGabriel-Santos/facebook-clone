@@ -7,13 +7,11 @@ function Timeline() {
     return (
         <section>
 
-            {/* Stories */}
             <div className="d-flex justify-content-between mt-5 position-relative">
 
-                {/* S 1 */}
                 <div className="bg-white mx-1 rounded story" type="button" style={{ width: '6em', height: '190px' }}>
-                    <img className="card-img-top" src={"https://source.unsplash.com/collection/happy-people"} alt="story posts"
-                        style={{ minHeight: '125px', objectFit: 'cover' }}
+                    <img className="card-img-top"
+                        src={"https://source.unsplash.com/collection/happy-people"} alt="story posts" style={{ minHeight: '125px', objectFit: 'cover' }}
                     />
 
                     <div className="align-items-center d-flex justify-content-center position-relative" style={{ minHeight: '65px' }}>
@@ -27,15 +25,15 @@ function Timeline() {
 
                 {
                     rows.map(index => (
-                        <div className="rounded mx-1 story" type="button" style={{ width: '6em', height: '190px' }} key={index}>
+                        <div className="rounded mx-1 story" type="button" style={{ height: '190px', width: '6em' }} key={index}>
 
-                            <img className="card-img-top rounded" src={'https://source.unsplash.com/random/' + index} alt="story posts"
-                                style={{ minHeight: '190px', objectFit: 'cover' }} />
+                            <img className="card-img-top rounded"
+                                src={'https://source.unsplash.com/random/' + index} alt="story posts" style={{ minHeight: '190px', objectFit: 'cover' }}
+                            />
                         </div>
                     ))
                 }
 
-                {/* Next icon */}
                 <div className="d-lg-block d-none pointer position-absolute start-100 top-50 translate-middle">
                     <i className="fas fa-arrow-right bg-white border p-3 rounded-circle text-muted" />
                 </div>

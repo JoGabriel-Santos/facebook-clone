@@ -18,12 +18,22 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 5px;
 }
 
+.accordion-styles {
+	color: #212529;
+	font-size: 1rem;
+	text-align: left;
+}
+
 .bg-gray {
 	background-color: #f0f2f5;
 }
 
 .border-red {
 	box-shadow: 0 0 0 1px red;
+}
+
+.contacts {
+	left: 75%;
 }
 
 .fs-0 {
@@ -68,6 +78,23 @@ body::-webkit-scrollbar-thumb {
 	position: absolute;
 	transform: translate(0, 5px);
 	width: 100%;
+}
+
+.photo {
+	object-fit: cover;
+	height: 38px;
+	width: 38px;
+}
+
+.send-comment {
+	font-size: 20;
+	margin-left: 5px;
+	max-width: 100px;
+}
+
+.slider-btn {
+	height: 30px;
+	width: 30px;
 }
 
 /* dropdown */

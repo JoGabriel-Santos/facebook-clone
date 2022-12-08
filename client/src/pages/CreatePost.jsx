@@ -45,10 +45,8 @@ function Create({ currentId, setCurrentId }) {
     return (
         <section>
 
-            {/* Create post */}
             <div className="bg-white border mt-3 p-3 rounded shadow">
 
-                {/* Avatar */}
                 <div className="d-flex" type="button">
                     <div className="p-1">
                         <img className="me-2 rounded-circle " src={user.result.picture} alt=""
@@ -64,7 +62,6 @@ function Create({ currentId, setCurrentId }) {
                     />
                 </div>
 
-                {/* Create modal */}
                 <div className="fade modal" id="createModal" tabIndex={-1}
                     aria-labelledby="createModalLabel"
                     aria-hidden="true"
@@ -73,7 +70,6 @@ function Create({ currentId, setCurrentId }) {
                     <div className="modal-dialog modal-dialog-centered">
                         <form className="modal-content" onSubmit={handleSubmit}>
 
-                            {/* Head */}
                             <div className="align-items-center modal-header">
                                 <h5 className="m-0 text-center text-dark w-100" id="exampleModalLabel">
                                     Create post
@@ -87,12 +83,10 @@ function Create({ currentId, setCurrentId }) {
                                 />
                             </div>
 
-                            {/* Body */}
                             <div className="modal-body">
                                 <div className="my-1 p-1">
                                     <div className="d-flex flex-column">
 
-                                        {/* Name */}
                                         <div className="align-items-center d-flex">
                                             <div className="p-2">
                                                 <img className="rounded-circle" src={user.result.picture} alt=""
@@ -104,7 +98,6 @@ function Create({ currentId, setCurrentId }) {
                                             </div>
                                         </div>
 
-                                        {/* Message */}
                                         <div>
                                             <textarea className={'form-control border-0'} cols={30} rows={5} value={postData.message}
                                                 onChange={(event) => setPostData({ ...postData, message: event.target.value })}
@@ -117,7 +110,6 @@ function Create({ currentId, setCurrentId }) {
                                 </div>
                             </div>
 
-                            {/* Footer */}
                             <div className="modal-footer">
                                 <button type="submit" className="btn btn-primary w-100">
                                     Post

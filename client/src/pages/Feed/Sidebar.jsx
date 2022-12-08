@@ -7,18 +7,15 @@ function Sidebar() {
 
     return (
         <div className="col-12 col-lg-3">
-            <div className="d-none d-xxl-block fixed-top h-100 overflow-hidden"
-                style={{ maxWidth: '360px', width: '100%', zIndex: 4 }}>
+            <div className="d-none d-xxl-block fixed-top h-100 overflow-hidden" style={{ maxWidth: '360px', width: '100%', zIndex: 4 }}>
 
                 <ul className="d-flex flex-column mb-5 ms-3 mt-4 navbar-nav pb-5" style={{ paddingTop: '56px' }}>
 
-                    {/* Avatar */}
                     <li className="dropdown-item p-1 rounded">
                         <a className="d-flex align-items-center text-decoration-none text-dark" href="">
                             <div className="p-2">
-                                <img className="rounded-circle me-2" src={user.result.picture} alt=""
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+
+                                <img className="rounded-circle me-2 photo" src={user.result.picture} alt="" />
                             </div>
 
                             <div>
@@ -27,14 +24,11 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Top 1 */}
                     <li className="dropdown-item p-1 rounded">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded-circle"
-                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/tSXYIzZlfrS.png" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+
+                                <img className="rounded-circle photo" src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/tSXYIzZlfrS.png" alt="" />
                             </div>
 
                             <div>
@@ -43,14 +37,10 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Top 2 */}
                     <li className="dropdown-item p-1 rounded">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded-circle"
-                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Im_0d7HFH4n.png" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+                                <img className="rounded-circle photo" src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Im_0d7HFH4n.png" alt="" />
                             </div>
 
                             <div>
@@ -59,14 +49,10 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Top 3 */}
                     <li className="dropdown-item p-1 rounded">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded-circle"
-                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/0gH3vbvr8Ee.png" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+                                <img className="rounded-circle photo" src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/0gH3vbvr8Ee.png" alt="" />
                             </div>
 
                             <div>
@@ -75,14 +61,10 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Top 4 */}
                     <li className="dropdown-item p-1 rounded">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded-circle"
-                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/MN44Sm-CTHN.png" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+                                <img className="rounded-circle photo" src="https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/MN44Sm-CTHN.png" alt="" />
                             </div>
 
                             <div>
@@ -91,14 +73,10 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Top 5 */}
                     <li className="dropdown-item p-1 rounded">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded-circle"
-                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/y-/r/FhOLTyUFKwf.png" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+                                <img className="rounded-circle photo" src="https://static.xx.fbcdn.net/rsrc.php/v3/y-/r/FhOLTyUFKwf.png" alt="" />
                             </div>
 
                             <div>
@@ -107,7 +85,6 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* See more */}
                     <li className="p-1" type="button">
                         <div id="seeMore">
                             <div className="align-items-center d-flex"
@@ -128,7 +105,6 @@ function Sidebar() {
 
                     <hr className="m-0" />
 
-                    {/* Shortcuts */}
                     <div className="align-items-center d-flex edit-heading justify-content-between mt-2 text-muted">
                         <h4 className="m-0 pointer">Your Shortcuts</h4>
 
@@ -138,14 +114,11 @@ function Sidebar() {
                         </p>
                     </div>
 
-                    {/* Short 1 */}
                     <li className="dropdown-item p-1">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded border border-1 border-secondary"
-                                    src="https://source.unsplash.com/random/10" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+
+                                <img className="border border-1 border-secondary photo rounded" src="https://source.unsplash.com/random/10" alt="" />
                             </div>
 
                             <div>
@@ -154,14 +127,11 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Short 2 */}
                     <li className="dropdown-item p-1">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded border border-1 border-secondary"
-                                    src="https://source.unsplash.com/random/20" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+
+                                <img className="border border-1 border-secondary photo rounded" src="https://source.unsplash.com/random/20" alt="" />
                             </div>
 
                             <div>
@@ -170,14 +140,11 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Short 3 */}
                     <li className="dropdown-item p-1">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded border border-1 border-secondary"
-                                    src="https://source.unsplash.com/random/30" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+
+                                <img className="border border-1 border-secondary photo rounded" src="https://source.unsplash.com/random/30" alt="" />
                             </div>
 
                             <div>
@@ -186,14 +153,11 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* Short 4 */}
                     <li className="dropdown-item p-1">
                         <a className="align-items-center d-flex text-dark text-decoration-none" href="#">
                             <div className="p-2">
-                                <img className="rounded border border-1 border-secondary"
-                                    src="https://source.unsplash.com/random/40" alt="from fb"
-                                    style={{ width: '38px', height: '38px', objectFit: 'cover' }}
-                                />
+
+                                <img className="border border-1 border-secondary photo rounded" src="https://source.unsplash.com/random/40" alt="" />
                             </div>
 
                             <div>
@@ -202,7 +166,6 @@ function Sidebar() {
                         </a>
                     </li>
 
-                    {/* See more */}
                     <li className="p-1" type="button">
                         <div id="seeMoreShortcuts">
                             <div className="align-items-center d-flex"

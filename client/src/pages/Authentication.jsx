@@ -80,7 +80,7 @@ function Authentication() {
 
     return (
         <div className="fill container d-flex flex-column flex-lg-row justify-content-center">
-            {/* heading */}
+
             <div className="m-auto text-center text-lg-start">
                 <h1 className="fs-0 fw-bold text-primary">facebook</h1>
                 <p className="fs-4 mx-auto mx-lg-0 w-75">
@@ -88,9 +88,8 @@ function Authentication() {
                 </p>
             </div>
 
-            {/* form card */}
             <form onSubmit={submitHandler} className="mx-auto m-auto" style={{ maxWidth: '28rem', width: '100%' }}>
-                {/* login form */}
+
                 <div className="border bg-white input-group-lg p-3 rounded shadow">
 
                     {

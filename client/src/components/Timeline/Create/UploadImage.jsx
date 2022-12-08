@@ -8,9 +8,7 @@ function UploadImage(props) {
         <div className="border border-1 border-light d-flex justify-content-between mt-3 p-3 rounded">
 
             <div className={'file-input'}>
-
-                <FileBase type="file" multiple={false}
-                    onDone={({ base64 }) => props.uploadImage(base64)} />
+                <FileBase type="file" multiple={false} onDone={({ base64 }) => props.uploadImage(base64)} />
             </div>
         </div>
     )

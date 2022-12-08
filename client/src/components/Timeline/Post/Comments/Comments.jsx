@@ -4,12 +4,8 @@ import CreateComment from './CreateComment'
 
 function Comments({ post }) {
 
-    console.log(post)
-
     return (
-        <div className="accordion-collapse collapse" id="collapsePost"
-            aria-labelledby="heading"
-            data-bs-parent="#accordionExample">
+        <div className="accordion-collapse collapse" id={`id${post._id}`}>
 
             <hr />
 
@@ -18,28 +14,23 @@ function Comments({ post }) {
                 {
                     post.comments.map((comment) => (
 
-                        <div key={comment.idComment} className="align-items-center d-flex my-1">
+                        <div key={comment.idComment} className="align-items-center border d-flex my-1 px-3 shadow">
 
-                            <img className="rounded-circle me-2"
-                                src={comment.userPhoto} alt="avatar"
-                                style={{ width: '38px', height: '38px', objectFit: 'cover' }} />
+                            <img className="rounded-circle me-2 photo"
+                                src={comment.userPhoto} alt="avatar" />
 
                             <div className="comment__input p-3 rounded w-100">
                                 <div className="d-flex justify-content-end">
 
-                                    <i className="fas fa-ellipsis-h pointer text-blue" id="post1CommentMenuButton"
+                                    <i className="fas fa-ellipsis-h pointer text-blue" id={`id${comment.idComment}`}
                                         aria-expanded="false"
                                         data-bs-toggle="dropdown"
                                     />
 
-                                    <ul className="dropdown-menu border-0 shadow" aria-labelledby="post1CommentMenuButton">
+                                    <ul className="dropdown-menu border-0 shadow" aria-labelledby={`id${comment.idComment}`}>
 
                                         <li className="align-items-center d-flex">
-                                            <a className="dropdown-item d-flex justify-content-around align-items-center fs-7"
-                                                href="client/src/components/Feed/Timeline/Timeline#">
-
-                                                Delete comment
-                                            </a>
+                                            <button className="dropdown-item d-flex justify-content-around align-items-center fs-7"> Delete comment </button>
                                         </li>
                                     </ul>
                                 </div>
